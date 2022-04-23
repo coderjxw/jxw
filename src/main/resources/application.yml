@@ -1,6 +1,6 @@
 spring:
   application:
-    name: jxw
+    name: jxw-provider
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     initial-size: 10
@@ -8,7 +8,7 @@ spring:
     max-wait: 1000
     min-idle: 10
     username: root
-    password: pwd12345
+    password: root
     url: jdbc:mysql://localhost:3306/jxw?serverTimezone=Asia/Shanghai
 
   redis:
@@ -20,8 +20,7 @@ spring:
   cloud:
     nacos:
       config:
-        enabled: false
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.1.111:8848,192.168.1.111:8849,192.168.1.111:8850
 
 
 jpa:
@@ -32,5 +31,6 @@ jpa:
   properties:
     hibernate:
       dialect: org.hibernate.dialect.MySQL57Dialect
-
+server:
+  port: 8080
 

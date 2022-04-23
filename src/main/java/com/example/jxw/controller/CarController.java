@@ -2,7 +2,6 @@ package com.example.jxw.controller;
 
 import com.example.jxw.config.RedisService;
 import com.example.jxw.entity.Car;
-import com.example.jxw.enums.DmpCustomerTagFilterType;
 import com.example.jxw.service.impl.CarManagementImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -42,10 +41,7 @@ public class CarController {
         return carManagement.findById(param);
     }
 
-    @GetMapping("/findByIdCache2")
-    public Car findByIdCache2(@RequestParam Integer param, @RequestParam DmpCustomerTagFilterType dmpCustomerTagFilterType) {
-        return carManagement.findById(param);
-    }
+
 
     @GetMapping("/findByIdCache3")
     public Car findByIdCache3(@RequestParam Integer param) {

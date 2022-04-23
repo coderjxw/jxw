@@ -32,6 +32,7 @@ dependencies {
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     implementation group: 'com.alibaba.cloud', name: 'spring-cloud-starter-alibaba-nacos-discovery', version: '2021.1'
+    implementation group: 'com.alibaba.boot', name: 'nacos-config-spring-boot-starter', version: '0.2.1'
 }
 
 test {
